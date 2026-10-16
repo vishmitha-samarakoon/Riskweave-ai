@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiskWeave AI - Fraud Investigation Workstation</title>
+    <meta name="description" content="Fraud investigation workstation for retail banking and linked-account alerts, featuring evidence ledgers, entity relationship graphs, counterfactual sensitivity experiments, policy replay, and verifiable audit trails." />
+    <meta property="og:title" content="RiskWeave AI - Fraud Investigation Workstation" />
+    <meta property="og:description" content="Fraud investigation workstation for retail banking and linked-account alerts, featuring evidence ledgers, entity relationship graphs, counterfactual sensitivity experiments, policy replay, and verifiable audit trails." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var _rawFetch = window.fetch;
+          var _activeFetch = function() {
+            return _rawFetch ? _rawFetch.apply(window, arguments) : Promise.reject(new Error('Fetch not ready'));
+          };
+          var curr = window;
+          while (curr) {
+            try {
+              var d = Object.getOwnPropertyDescriptor(curr, 'fetch');
+              if (d && (!d.set || d.writable === false)) {
+                Object.defineProperty(curr, 'fetch', {
+                  configurable: true,
+                  enumerable: true,
+                  get: function() { return _activeFetch; },
+                  set: function(fn) { _activeFetch = fn; }
+                });
+              }
+            } catch (_) {}
+            curr = Object.getPrototypeOf(curr);
+          }
+          // Also explicitly define on window and Window.prototype if not already set
+          try {
+            Object.defineProperty(window, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() { return _activeFetch; },
+              set: function(fn) { _activeFetch = fn; }
+            });
+          } catch (_) {}
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                configurable: true,
+                enumerable: true,
+                get: function() { return _activeFetch; },
+                set: function(fn) { _activeFetch = fn; }
+              });
+            }
+          } catch (_) {}
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

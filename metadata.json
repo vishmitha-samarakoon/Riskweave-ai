@@ -1,0 +1,6 @@
+{
+  "name": "RiskWeave AI",
+  "description": "Fraud investigation workstation for retail banking and linked-account alerts, featuring evidence ledgers, entity relationship graphs, counterfactual sensitivity experiments, policy replay, and verifiable audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
